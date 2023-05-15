@@ -1,0 +1,22 @@
+[package]
+name = "ceb-watch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 'z' # Optimize for size
+
+[dependencies]
+log = "0.4.17"
+regex = "1.8.1"
+chrono = "0.4.24"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
+attohttpc = "0.25"
+anyhow = "1.0"
+
+
+[dependencies.table-extract]
+git = "https://github.com/steph0de/table-extract-rs.git"
+tag = "0.2.3"
